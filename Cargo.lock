@@ -32,9 +32,9 @@ dependencies = [
 
 [[package]]
 name = "luo9_sdk"
-version = "0.5.1"
+version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "37006f918d80e228550e15c8acf0d03536589263347dc16acf8e85908893af45"
+checksum = "86543da11f24b6a4e819f956d16717ca72975a5238247cfe36b504a2575e82bd"
 dependencies = [
  "libc",
  "libloading",
@@ -50,7 +50,7 @@ checksum = "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79"
 
 [[package]]
 name = "plugin_echo"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "luo9_sdk",
  "serde_json",
