@@ -22,7 +22,7 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
-          repositories: luo9-bot/registry
+          repositories: registry
 
       - name: 读取 Cargo.toml 信息
         id: meta
@@ -47,7 +47,7 @@ jobs:
         run: |
           CRATE_NAME="${{ steps.meta.outputs.crate_name }}"
           echo "linux_asset=lib${CRATE_NAME}.so" >> $GITHUB_OUTPUT
-          echo "windows_asset=lib${CRATE_NAME}.dll" >> $GITHUB_OUTPUT
+          echo "windows_asset=${CRATE_NAME}.dll" >> $GITHUB_OUTPUT
 
       - name: 通知注册表
         run: |
